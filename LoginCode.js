@@ -15,7 +15,7 @@ function CheckExpired(){
         }
     }
     else{
-        print("The program license has expired")
+        print("The program license has expired!")
     }
 }
 
