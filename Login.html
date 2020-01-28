@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html>
- <head>
-    <link rel="stylesheet" href="LoginStyleSheet.css">
-    <title> JAH NESTING PROGRAMME </title>
- </head>
- <form action="action_page.php" method="post">
-   <div class="JAGimage">
-      <img src="img.jpg" alt="temp">
-   </div>
-   <div class="JAHtext">
-      <label>
-         <H5>JAH NESTING PROGRAMME
-         <H6>Program for the sole use by J A Harrison and Co (Manchester) Limited
-         <H6>This is a test program and all outputs must be tested before use
-         <H6>Version 2.0.0
-      </label>
-      <label id="ExpireLbl">
-         <H5></H5>
-      </label>
-   </div>
-   <div class="agreementbtn">
-      <button id="accept" onclick="acceptPressed()">Accept</button>
-      <button id="admin" onclick="adminPressed()">Admin</button>
-      <button id="decline" onclick="declinePressed()">Decline</button>
-   </div>
-   <div class="checkbox">
-      <label for="checkbox">
-      </label>
-      <Label><input type="checkbox"/>Enable load, save and print</Label>
-   </div>
-   <div class="activation">
-      <label for="activationcode">
-      <input type="activationcode" placeholder="Activation code" name="activationcode">
-   <div class="submitbtn">
-      <button type="submit">Login</button>
-   </div>
-
-   <script type="text/javascript" src="LoginCode.js"></script>>
-
-      <!----function accep tPressed(){
-         //Close this page and open the first program page
-         URL(test)
-      }
-      function adminPressed(){
-         //Close this page and open the admin program page
-         URL(test)
-      }
-      function declinePressed(){
-         //Close this page
-         URL(test)
-      }--->
+   <head>
+      <link rel="stylesheet" href="LoginStyleSheet.css">
+      <title> Log In | JAH Nesting Program </title> 
+   </head>
+   <body>
+      <div class="container">
+         <div class="main">
+            <div class="JAHimage">
+               <img src="JAHLogo.jpg" alt="temp">
+               </div>
+            <div class="JAHtext">
+               <label>
+                  <H3 class="A1">JAH NESTING PROGRAM</H5>
+                  <H5 class="A2">Program for the sole use by J A Harrison and Co (Manchester) Limited</H5>
+                  <H5 class="A3">This is a test program and all outputs must be tested before use</H5>
+               </label>
+               <label id="ExpireLbl">
+                  <p></p>
+               </label>
+            </div>
+            <div class="agreementbtn">
+               <button id="accept" onclick="acceptPressed()">Accept</button>
+               <button id="admin" onclick="adminPressed()">Admin</button>
+               <button id="decline" onclick="declinePressed()">Decline</button>
+            </div>
+            <div class="checkbox">
+               <label for="checkbox">
+               </label>
+               <Label>
+                  <input type="checkbox"/>Enable load, save and print
+               </Label>
+            </div>
+            <div class="activation">
+               <div for="activationcode">
+                  <input type="activationcode" placeholder="Activation code" name="activationcode">
+               </div>
+               <div class="submitbtn">
+                  <button type="submit">Login</button>
+               </div>
+            </div>
+         </div>
+         <div class="backgroundimg">
+            <img src="JAHFactory.jpg">
+         </div>   
+      </div>
       
-   </script>
-</form>
+      <script type="text/javascript" src="LoginCode.js"></script>
+   </body>
 </html>

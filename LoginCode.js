@@ -1,23 +1,35 @@
 // JavaScript to run the login page
+CheckExpired();
 
 function CheckExpired(){
-    //Gets the current date (not machine local) and checks how long the user is licensed to use program.
-    var date = new Date();
+    //Checks the date and then compares it to the expirey date
+    var expire = new Date();
+    var exdd = String(10).padStart(2, '0'); // Date  (padding length 2 with a 0 if 1)
+    var exmm = String(2).padStart(2, '0'); // Month (Jan is 0)
+    var exyyyy = String(2020); // Year
     
-
-    var today = date.getDate()   //Formatted "Year-Month-Day"
-    var expire = date.setDate(2020, 1, 30)  //Date that program license expires
-
-    if (today < expire){
-        var diff = expire - today
-        if (diff.days < 60){
-            print("The program license expires in " + str(diff.days) + " days")
+    expire = exyyyy + '' + exmm + '' + exdd;
+    
+    var today = new Date();
+    var dd = String(today.getUTCDate()).padStart(2, '0');
+    var mm = String(today.getUTCMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getUTCFullYear();
+    
+    today = yyyy + '' + mm + '' + dd;
+    
+    var todayint = parseInt(today, 10);
+    var expireint = parseInt(expire, 10)
+    
+    var diff = Math.abs(expire-today)
+    
+    var timeleft = expireint - todayint
+    
+    if (todayint < expireint){    
+        if (timeleft <= 200){
+            document.getElementById("ExpireLbl").innerHTML = "Months till program will expire: " + String(Math.ceil(timeleft/100));
         }
     }
     else{
-        print("The program license has expired!")
-    }
+        document.getElementById("ExpireLbl").innerHTML = "Your program has expired";
+    }    
 }
-
-var path = window.location.pathname
-window.print(path)
