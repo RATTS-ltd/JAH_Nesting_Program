@@ -33,3 +33,42 @@ function CheckExpired(){
         document.getElementById("ExpireLbl").innerHTML = "Your program has expired";
     }    
 }
+
+function ActivationCode(){
+    var inputcode = document.getElementById('activationcode').value;  
+    var codes = {month3: "13HG65", month6: "16ER29", month12: "74OS72", month24: "62KM85"}
+
+    for(var key in codes){
+        var code = codes[key]
+        document.getElementById("temp").innerHTML = "... " + code + "..." + inputcode;
+        if(inputcode == code){
+            if(code == "13HG65"){
+                expireint + 0300;
+                document.getElementById("temp").innerHTML =  "Date is 1" + expireint;
+                out();
+            }
+            if(code == "16ER29"){
+                expireint + 0600;
+                document.getElementById("temp").innerHTML =  "Date is 2" + expireint;
+            }
+            if(code == "74OS72"){
+                expireint + 1000;
+                document.getElementById("temp").innerHTML =  "Date is 3" + String(expireint);
+            }
+            if(code == "62KM85"){
+                expireint + 2000;
+                document.getElementById("temp").innerHTML =  "Date is 4" + String(expireint);
+            }
+        }
+        else{
+            document.getElementById("temp").innerHTML = "Code not accepted!";
+
+        }
+    }
+
+    function out(){
+        var testing = 13;
+        document.getElementById("temp").innerHTML = "spooky";
+
+    }
+}

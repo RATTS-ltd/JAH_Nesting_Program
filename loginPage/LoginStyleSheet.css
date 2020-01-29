@@ -109,6 +109,12 @@ button:hover{
     height: 100vh;
 }
 
+.footer{
+    display: flex;
+    padding-left: 15px;
+    
+}
+
 
 @media screen and (max-width: 300px){
     span.password{
